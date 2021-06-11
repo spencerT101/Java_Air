@@ -3,7 +3,7 @@ package plane;
 public enum PlaneType {
 
     AIRBUS_A220(109, 60.78),
-    BOEING747_8(467);
+    BOEING747_8(467, 442);
 
     private final int capacity;
     private final double maxWeightTons;
@@ -18,8 +18,9 @@ public enum PlaneType {
     }
 
 
-    public double getMaxPlaneWeight(){
+    public double getMaxPlaneWeight() {
         return this.maxWeightTons;
     }
+}
 
 

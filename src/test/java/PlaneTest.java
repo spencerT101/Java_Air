@@ -32,7 +32,7 @@ public class PlaneTest {
 
     @Test
     public void canGetMaxPlaneWeightFromEnum(){
-        assertEquals(60.78, plane1.getMaxPlaneWeightFromEnum());
+        assertEquals(60.78, plane1.getMaxPlaneWeightFromEnum(), 0.00);
     }
 
 
