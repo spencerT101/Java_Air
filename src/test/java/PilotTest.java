@@ -7,6 +7,7 @@ import static org.junit.Assert.assertEquals;
 
 public class PilotTest {
     private Pilot pilot;
+    private String qualified;
 
     @Before
     public void setUp(){
@@ -25,8 +26,15 @@ public class PilotTest {
     }
     @Test
     public void canGetPilotLicense(){
-        assertEquals("J5678910", pilot.getPilotLicence());
+        assertEquals("My pilot licence number is J5678910", pilot.getPilotLicence());
         System.out.println(pilot.getPilotLicence());
+    }
+
+    @Test
+    public void canPilotFlyPlane(){
+        qualified = "I am qualified to fly passenger aircraft!";
+        assertEquals("I am qualified to fly passenger aircraft!", pilot.pilotCanFlyPlane(qualified));
+        System.out.println(pilot.pilotCanFlyPlane(qualified));
     }
 
 

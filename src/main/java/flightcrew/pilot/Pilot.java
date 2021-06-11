@@ -14,6 +14,10 @@ public class Pilot extends FlightCrewMember {
     }
 
     public String getPilotLicence() {
-        return this.pilotLicence;
+        return "My pilot licence number is " + this.pilotLicence;
     }
+    public String pilotCanFlyPlane(String qualified){
+        return qualified;
+    }
+
 }
