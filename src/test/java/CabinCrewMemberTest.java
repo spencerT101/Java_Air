@@ -21,5 +21,6 @@ public class CabinCrewMemberTest {
     @Test
     public void canGetCabinCrewMemberRank(){
         assertEquals(Rank.FLIGHT_ATTENDANT, flyAttendant.getRank());
+        System.out.println(flyAttendant.getRank());
     }
 }
