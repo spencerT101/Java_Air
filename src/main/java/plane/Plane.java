@@ -10,5 +10,11 @@ public class Plane {
     public PlaneType getPlaneTypeFromEnum(){
         return this.planeType;
     }
+    public  int getPlaneCapacityFromEnum(){
+        return this.planeType.getCapacity();
+    }
 
+    public double getMaxPlaneWeightFromEnum() {
+        return this.planeType.getMaxPlaneWeight();
+    }
 }
