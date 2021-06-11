@@ -7,6 +7,7 @@ import static org.junit.Assert.assertEquals;
 
 public class CabinCrewMemberTest {
     private CabinCrewMember flyAttendant;
+    private String message;
 
     @Before
     public void setUp(){
@@ -22,5 +23,11 @@ public class CabinCrewMemberTest {
     public void canGetCabinCrewMemberRank(){
         assertEquals(Rank.FLIGHT_ATTENDANT, flyAttendant.getRank());
         System.out.println(flyAttendant.getRank());
+    }
+    @Test
+    public void canRelayMessageToPassengers(){
+        message = "Please fasten your seatbelts";
+        assertEquals("Please fasten your seatbelts", flyAttendant.relayMessageToPassengers(message));
+        System.out.println(flyAttendant.relayMessageToPassengers(message));
     }
 }

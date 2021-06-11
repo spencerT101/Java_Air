@@ -10,4 +10,8 @@ public class CabinCrewMember extends FlightCrewMember {
     public CabinCrewMember(String name, Rank rank){
         super(name, rank);
     }
+
+    public String relayMessageToPassengers(String message){
+        return message;
+    }
 }
