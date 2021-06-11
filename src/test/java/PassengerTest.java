@@ -18,4 +18,8 @@ public class PassengerTest {
         assertEquals("Sally", passenger1.getPassengerName());
         System.out.println(passenger1.getPassengerName());
     }
+    @Test
+    public void canGetNumOfCheckInBags(){
+        assertEquals(1, passenger1.getNumOfCheckInBags());
+    }
 }
