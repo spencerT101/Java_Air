@@ -10,16 +10,15 @@ import plane.PlaneType;
 import java.util.ArrayList;
 
 public class Flight {
-
-    private PlaneType planeType;
     private Plane plane;
+    private PlaneType planeType;
     private Pilot pilot;
     private ArrayList<Passenger>passengerList;
     private ArrayList<CabinCrewMember> cabinCrewList;
 
 
-    public Flight( PlaneType planeType, Pilot pilot, ArrayList passengerList, ArrayList cabinCrewList){
-        this.planeType = planeType;
+    public Flight( Plane plane, Pilot pilot, ArrayList passengerList, ArrayList cabinCrewList){
+        this.plane = plane;
          this.pilot = pilot;
          this.passengerList = new ArrayList<>();
          this.cabinCrewList = new ArrayList<>();
@@ -27,8 +26,8 @@ public class Flight {
     }
 
 
-    public PlaneType flightCardHasPlane() {
-        return this.planeType;
+    public PlaneType flightCardHasPlane(Plane plane) {
+        return plane.getPlaneTypeFromEnum();
     }
 
     public String flightCardHasPilot(Pilot pilot) {

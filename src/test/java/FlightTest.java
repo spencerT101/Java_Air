@@ -16,6 +16,7 @@ import static org.junit.Assert.assertTrue;
 public class FlightTest {
     private Flight flight;
     private PlaneType planeType;
+    private Plane plane1;
     private Pilot pilot1;
     private Passenger passenger1;
     private ArrayList<Passenger> passengers;
@@ -26,18 +27,19 @@ public class FlightTest {
 
     @Before
     public void setUp(){
-        flight = new Flight(PlaneType.AIRBUS_A220, pilot1, passengers, cabinCrew );
+        flight = new Flight(plane1, pilot1, passengers, cabinCrew );
         pilot1 = new Pilot("Harry", Rank.CAPTAIN,"JCD65438");
         passenger1 = new Passenger("Sally", 1);
         passengers = new ArrayList<>();
         cabinCrewMember1 = new CabinCrewMember ("Barry",Rank.FLIGHT_ATTENDANT );
         cabinCrew = new ArrayList<>();
+        plane1 = new Plane(PlaneType.AIRBUS_A220);
 
     }
     @Test
     public void flightCardCanHavePlane(){
-        assertEquals(PlaneType.AIRBUS_A220, flight.flightCardHasPlane());
-        System.out.println(flight.flightCardHasPlane());
+        assertEquals(PlaneType.AIRBUS_A220, flight.flightCardHasPlane(plane1));
+        System.out.println(flight.flightCardHasPlane(plane1));
     }
     @Test
     public void flightCardCanHavePilot(){
