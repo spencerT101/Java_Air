@@ -77,7 +77,6 @@ public class FlightTest {
     @Test
     public void canRemoveCabinCrewMemberFromFlightCardCabinCrewList(){
         flight.addCabinCrewMemberToFlightCard(cabinCrewMember1);
-        System.out.println(flight.cabinCrewListCount());
         flight.removeCabinCrewMemberFromFlightCard(cabinCrewMember1);
         assertEquals(0, flight.cabinCrewListCount());
         System.out.println(flight.cabinCrewListCount());
