@@ -22,12 +22,12 @@ public class FlightTest {
     private ArrayList<Passenger> passengers;
     private CabinCrewMember cabinCrewMember1;
     private ArrayList<CabinCrewMember> cabinCrew;
-//    private String departureAirport;
-//    private String destinationAirport;
+    private String departureAirport;
+    private String destinationAirport;
 
     @Before
     public void setUp(){
-        flight = new Flight(plane1, pilot1, passengers, cabinCrew );
+        flight = new Flight(plane1, pilot1, passengers, cabinCrew, "LGW", "BUD" );
         pilot1 = new Pilot("Harry", Rank.CAPTAIN,"JCD65438");
         passenger1 = new Passenger("Sally", 1);
         passengers = new ArrayList<>();
@@ -82,6 +82,16 @@ public class FlightTest {
         flight.removeCabinCrewMemberFromFlightCard(cabinCrewMember1);
         assertEquals(0, flight.cabinCrewListCount());
         System.out.println(flight.cabinCrewListCount());
+    }
+    @Test
+    public void canGetFlightCardDepartureAirport(){
+        assertEquals("LGW", flight.getFlightCardDepartureAirport());
+        System.out.println(flight.getFlightCardDepartureAirport());
+    }
+    @Test
+    public void canGetFlightCardDestinationAirport(){
+        assertEquals("BUD", flight.getFlightCardDestinationAirport());
+        System.out.println(flight.getFlightCardDestinationAirport());
     }
 
 

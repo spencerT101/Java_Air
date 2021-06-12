@@ -15,13 +15,17 @@ public class Flight {
     private Pilot pilot;
     private ArrayList<Passenger>passengerList;
     private ArrayList<CabinCrewMember> cabinCrewList;
+    private String departureAirport;
+    private String destinationAirport;
 
 
-    public Flight( Plane plane, Pilot pilot, ArrayList passengerList, ArrayList cabinCrewList){
+    public Flight( Plane plane, Pilot pilot, ArrayList passengerList, ArrayList cabinCrewList, String departureAirport, String destinationAirport){
         this.plane = plane;
          this.pilot = pilot;
          this.passengerList = new ArrayList<>();
          this.cabinCrewList = new ArrayList<>();
+         this.departureAirport = departureAirport;
+         this.destinationAirport = destinationAirport;
 
     }
 
@@ -57,6 +61,14 @@ public class Flight {
 
     public void removeCabinCrewMemberFromFlightCard(CabinCrewMember cabinCrewMember) {
         this.cabinCrewList.remove(cabinCrewMember);
+    }
+
+    public String getFlightCardDepartureAirport() {
+        return this.departureAirport;
+    }
+
+    public String getFlightCardDestinationAirport() {
+        return this.destinationAirport;
     }
 }
 
