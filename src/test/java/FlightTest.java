@@ -9,6 +9,7 @@ import plane.Plane;
 import plane.PlaneType;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class FlightTest {
     private Flight flight;
@@ -22,13 +23,19 @@ public class FlightTest {
     @Before
     public void setUp(){
         flight = new Flight(PlaneType.AIRBUS_A220, pilot1);
-        pilot1 = new Pilot("Harry", Rank.CAPTAIN,"JCD65438")
+        pilot1 = new Pilot("Harry", Rank.CAPTAIN,"JCD65438");
+
 
     }
     @Test
-    public void canAssignPlaneToFlightCard(){
-        assertEquals(PlaneType.AIRBUS_A220, flight.canAssignPlaneToFlightCard());
-        System.out.println(flight.canAssignPlaneToFlightCard());
+    public void flightCardCanHavePlane(){
+        assertEquals(PlaneType.AIRBUS_A220, flight.flightCardHasPlane());
+        System.out.println(flight.flightCardHasPlane());
+    }
+    @Test
+    public void flightCardCanHavePilot(){
+        assertEquals("Harry", flight.flightCardHasPilot(pilot1));
+        System.out.println(flight.flightCardHasPilot(pilot1));
     }
 
 
