@@ -19,18 +19,19 @@ public class FlightTest {
     private Pilot pilot1;
     private Passenger passenger1;
     private ArrayList<Passenger> passengers;
-
-//    private CabinCrewMember CabinCrewMember1;
+    private CabinCrewMember cabinCrewMember1;
+    private ArrayList<CabinCrewMember> cabinCrew;
 //    private String departureAirport;
 //    private String destinationAirport;
 
     @Before
     public void setUp(){
-        flight = new Flight(PlaneType.AIRBUS_A220, pilot1, passengers);
+        flight = new Flight(PlaneType.AIRBUS_A220, pilot1, passengers, cabinCrew );
         pilot1 = new Pilot("Harry", Rank.CAPTAIN,"JCD65438");
         passenger1 = new Passenger("Sally", 1);
         passengers = new ArrayList<>();
-
+        cabinCrewMember1 = new CabinCrewMember ("Barry",Rank.FLIGHT_ATTENDANT );
+        cabinCrew = new ArrayList<>();
 
     }
     @Test
@@ -61,7 +62,26 @@ public class FlightTest {
         assertEquals(0, flight.getPassengerListCount());
         System.out.println(flight.getPassengerListCount());
     }
+    @Test
+    public void flightCardCabinCrewListIsZero(){
+        assertEquals(0, flight.cabinCrewListCount());
+        System.out.println(flight.cabinCrewListCount());
+    }
 
+    @Test
+    public void canAddCabinCrewMemberToFlightCardCabinCrewList(){
+        flight.addCabinCrewMemberToFlightCard(cabinCrewMember1);
+        assertEquals(1, flight.cabinCrewListCount());
+        System.out.println(flight.cabinCrewListCount());
+    }
+    @Test
+    public void canRemoveCabinCrewMemberFromFlightCardCabinCrewList(){
+        flight.addCabinCrewMemberToFlightCard(cabinCrewMember1);
+        System.out.println(flight.cabinCrewListCount());
+        flight.removeCabinCrewMemberFromFlightCard(cabinCrewMember1);
+        assertEquals(0, flight.cabinCrewListCount());
+        System.out.println(flight.cabinCrewListCount());
+    }
 
 
 
