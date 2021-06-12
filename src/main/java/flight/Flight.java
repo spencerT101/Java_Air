@@ -2,19 +2,24 @@ package flight;
 
 
 import flightcrew.pilot.Pilot;
+import passenger.Passenger;
 import plane.Plane;
 import plane.PlaneType;
+
+import java.util.ArrayList;
 
 public class Flight {
 
     private PlaneType planeType;
     private Plane plane;
     private Pilot pilot;
+    private ArrayList<Passenger>passengerList;
 
 
-    public Flight( PlaneType planeType, Pilot pilot){
+    public Flight( PlaneType planeType, Pilot pilot, ArrayList passengerList){
         this.planeType = planeType;
          this.pilot = pilot;
+         this.passengerList = new ArrayList<>();
 
     }
 
@@ -25,6 +30,11 @@ public class Flight {
 
     public String flightCardHasPilot(Pilot pilot) {
          return pilot.getName();
+    }
+
+    public int getPassengersList() {
+       return this.passengerList.size();
+
     }
 }
 
