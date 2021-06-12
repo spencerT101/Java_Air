@@ -17,4 +17,6 @@ public class Plane {
     public double getMaxPlaneWeightFromEnum() {
         return this.planeType.getMaxPlaneWeight();
     }
+
+
 }
