@@ -54,6 +54,13 @@ public class FlightTest {
         assertEquals(1, flight.getPassengerListCount());
         System.out.println(flight.getPassengerListCount());
     }
+    @Test
+    public void canRemovePassengerFromFlightCardPassengerList(){
+        flight.addPassengerToFlightCard(passenger1);
+        flight.removePassengerFromFlightCard(passenger1);
+        assertEquals(0, flight.getPassengerListCount());
+        System.out.println(flight.getPassengerListCount());
+    }
 
 
 

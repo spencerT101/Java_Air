@@ -40,6 +40,10 @@ public class Flight {
     public void addPassengerToFlightCard(Passenger passenger) {
         this.passengerList.add(passenger);
     }
+
+    public void removePassengerFromFlightCard(Passenger passenger) {
+        this.passengerList.remove(passenger);
+    }
 }
 
 
