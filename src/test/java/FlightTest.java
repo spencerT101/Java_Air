@@ -93,6 +93,10 @@ public class FlightTest {
         assertEquals("BUD", flight.getFlightCardDestinationAirport());
         System.out.println(flight.getFlightCardDestinationAirport());
     }
+    @Test
+    public void canGetFlightCardInfo(){
+        assertEquals(flight, flight.getFlightCardInfo(flight) );
+    }
 
 
 

@@ -70,6 +70,10 @@ public class Flight {
     public String getFlightCardDestinationAirport() {
         return this.destinationAirport;
     }
+
+    public Flight getFlightCardInfo(Flight flight) {
+        return flight;
+    }
 }
 
 
