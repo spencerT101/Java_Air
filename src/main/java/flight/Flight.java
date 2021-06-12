@@ -32,9 +32,13 @@ public class Flight {
          return pilot.getName();
     }
 
-    public int getPassengersList() {
+    public int getPassengerListCount() {
        return this.passengerList.size();
 
+    }
+
+    public void addPassengerToFlightCard(Passenger passenger) {
+        this.passengerList.add(passenger);
     }
 }
 

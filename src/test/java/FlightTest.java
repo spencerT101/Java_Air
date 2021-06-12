@@ -45,8 +45,14 @@ public class FlightTest {
     }
     @Test
     public void flightCardHasZeroPassengers(){
-        assertEquals(0, flight.getPassengersList());
-        System.out.println(flight.getPassengersList());
+        assertEquals(0, flight.getPassengerListCount());
+        System.out.println(flight.getPassengerListCount());
+    }
+    @Test
+    public void canAddPassengerToFlightCardPassengerList(){
+        flight.addPassengerToFlightCard(passenger1);
+        assertEquals(1, flight.getPassengerListCount());
+        System.out.println(flight.getPassengerListCount());
     }
 
 
